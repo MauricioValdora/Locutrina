@@ -1,20 +1,5 @@
-* {
-  padding: 0;
-  margin: 0;
-
-}
-
-.cantidadElementosCarrito {
-  color: white;
-}
-
-.saludo {
-  color: rgb(239, 144, 158);
-  font-family: 'Rock 3D', cursive;
-  background-color: black;
-}
-
-.navbar-brand {
-  font-family: 'Comforter', cursive;
-  font-size: 45px;
+.productsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
 }
