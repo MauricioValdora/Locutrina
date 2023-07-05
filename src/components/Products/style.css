@@ -1,7 +1,7 @@
 .productos-container {
   color: rgb(239, 144, 158);
   font-family: 'Rock 3D', cursive;
-  background-color: black;
+  background-color: #121111;
   width: 400px;
   border-radius: 10px;
   display: flex;
@@ -9,5 +9,13 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
+  font-size: 20px;
 }
 
+.price{
+  text-align:center ;
+  color:red ;
+}
+.btn{
+  text-align: center;
+}
