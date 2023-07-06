@@ -1,6 +1,6 @@
-import './style.css'
 
-const ItemListContainer = ({ id, name, avatar, description, price, showDetails }) => {
+
+const ItemDetails = ({ id, name, avatar, description, price, }) => {
 
     return (
         <div className='productos-container' >
@@ -11,9 +11,10 @@ const ItemListContainer = ({ id, name, avatar, description, price, showDetails }
                 <p>{description}</p>
                 <p className='price'>{price}</p>
             </div>
-            <button className='btn' onClick={() => showDetails(id)}>Detalles</button>
         </div>
 
     )
+
 }
-export default ItemListContainer
+
+export default ItemDetails;

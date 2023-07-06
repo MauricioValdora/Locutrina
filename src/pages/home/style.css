@@ -1,0 +1,11 @@
+.productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    overflow: hidden;
+    gap: 0.2rem;
+
+}
