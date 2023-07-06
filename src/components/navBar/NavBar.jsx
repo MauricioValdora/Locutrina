@@ -1,4 +1,4 @@
-import CardWidget from '../CardWidget'
+import CardWidget from '../cardWidget/CardWidget'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
 
@@ -13,12 +13,10 @@ const NavBar = () => {
                     <li ><a href="" >Pantalones</a></li>
                     <li ><a href="" >Shores</a></li>
                     <li ><a href="" >Buzos</a></li>
-
                 </ul>
             </nav>
-       
 
-            {/* <CardWidget counter={number} /> */}
+        <CardWidget />
 
         </header>
     )
