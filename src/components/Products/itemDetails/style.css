@@ -1,0 +1,15 @@
+.productos-container-details{
+    color: rgb(239, 144, 158);
+    font-family: 'Rock 3D', cursive;
+    background-color: #121111d6;
+    width: 400px;
+    height: 570px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    font-size: 20px;
+    width: 80%;
+}

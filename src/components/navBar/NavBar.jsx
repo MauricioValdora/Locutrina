@@ -1,6 +1,8 @@
 import CardWidget from '../cardWidget/CardWidget'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
+import { Link } from 'react-router-dom';
+
 
 const NavBar = () => {
     return (
@@ -8,16 +10,14 @@ const NavBar = () => {
             <a href="/" className='navbar-logo'>LocuTrina</a>
             <nav className="navbar-nav ">
                 <ul className='lista' >
-                    <li ><a href="" >Remeras</a></li>
-                    <li ><a href="" >Pilusos</a></li>
-                    <li ><a href="" >Pantalones</a></li>
-                    <li ><a href="" >Shores</a></li>
-                    <li ><a href="" >Buzos</a></li>
+                    <li ><Link to="products/remeras">Remeras</Link></li>
+                    <li ><Link to="products/gorras">Gorras</Link></li>
+                    <li ><Link to="products/pantalones">Pantalones</Link></li>
+                    <li ><Link to="products/zapatillas">Zapatillas</Link></li>
+                    <li ><Link to="products/toallas">Toallas</Link></li>
+                    <CardWidget />
                 </ul>
             </nav>
-
-        <CardWidget />
-
         </header>
     )
 }
