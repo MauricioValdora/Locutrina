@@ -1,10 +1,10 @@
 import './styles.css'
 
-function Buscador() {
+function Buscador({onChange}) {
 
     return (
         <div className='contenedor-buscador'>
-            <input type="text" placeholder='Buscar' className='buscador'/>
+            <input type="text" placeholder='Buscar' className='buscador' onChange={onChange} />
             <button className='btn'><span class="material-symbols-outlined">search</span></button>
         </div>
     )

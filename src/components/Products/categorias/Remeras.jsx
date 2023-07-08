@@ -1,11 +1,16 @@
 import { useFetch } from '../../../hooks/useFetch'
 import { API_URLS } from '../../../constants/index'
 import Loading from '../../loader/loading';
+import { Navegar } from '../../../hooks/useNavigate';
 
 const Remeras = () => {
+
+
     const { products, loading } = useFetch(`${API_URLS.PRODUCTS.url}`);
     const categorias = products
         .filter(product => product.category === 'Shirt')
+
+
 
     return (
 
@@ -21,12 +26,7 @@ const Remeras = () => {
                         <p className='price'>{c.price}</p>
                         <p>{c.category}</p>
                     </div>
-                    <button
-                        className='btn'
-                        onClick={() => showDetails(c.id)}
-                    >
-                        Detalles
-                    </button>
+                    <Navegar id={c.id}/>
                 </div>
             ))
             }

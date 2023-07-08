@@ -1,6 +1,7 @@
 import { useFetch } from '../../../hooks/useFetch'
 import { API_URLS } from '../../../constants/index'
 import Loading from '../../loader/loading';
+import { Navegar } from '../../../hooks/useNavigate';
 
 const Toallas = () => {
 
@@ -21,12 +22,8 @@ const Toallas = () => {
                         <p>{c.category}</p>
                         <p className='price'>{c.price}</p>
                     </div>
-                    <button
-                        className='btn'
-                        onClick={() => showDetails(c.id)}
-                    >
-                        Detalles
-                    </button>
+                    <Navegar id={c.id}/>
+
                 </div>
             ))}
         </div>

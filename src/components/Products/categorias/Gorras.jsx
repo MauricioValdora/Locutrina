@@ -1,6 +1,7 @@
 import { useFetch } from '../../../hooks/useFetch'
 import { API_URLS } from '../../../constants/index'
 import Loading from '../../loader/loading';
+import { Navegar } from '../../../hooks/useNavigate';
 
 const Gorras = () => {
 
@@ -21,12 +22,8 @@ const Gorras = () => {
                         <p className='price'>{c.price}</p>
                         <p>{c.category}</p>
                     </div>
-                    <button
-                        className='btn'
-                        onClick={() => showDetails(c.id)}
-                    >
-                        Detalles
-                    </button>
+                    <Navegar id={c.id}/>
+
                 </div>
             ))}
         </div>
