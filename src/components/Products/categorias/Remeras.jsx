@@ -5,12 +5,9 @@ import { Navegar } from '../../../hooks/useNavigate';
 
 const Remeras = () => {
 
-
     const { products, loading } = useFetch(`${API_URLS.PRODUCTS.url}`);
     const categorias = products
         .filter(product => product.category === 'Shirt')
-
-
 
     return (
 
@@ -26,7 +23,7 @@ const Remeras = () => {
                         <p className='price'>{c.price}</p>
                         <p>{c.category}</p>
                     </div>
-                    <Navegar id={c.id}/>
+                    <Navegar id={c.id} />
                 </div>
             ))
             }

@@ -18,11 +18,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/products/:productId' element={<ProductDetails />} />
-          <Route path='/products/remeras' element={<Remeras />} />
-          <Route path='/products/gorras' element={<Gorras />} />
-          <Route path='/products/pantalones' element={<Pantalones />} />
-          <Route path='/products/zapatillas' element={<Zapatillas />} />
-          <Route path='/products/toallas' element={<Toallas />} />
+        <Route path='/products/remeras' element={<Remeras />} />
+        <Route path='/products/gorras' element={<Gorras />} />
+        <Route path='/products/pantalones' element={<Pantalones />} />
+        <Route path='/products/zapatillas' element={<Zapatillas />} />
+        <Route path='/products/toallas' element={<Toallas />} />
       </Routes>
     </div>
   )
