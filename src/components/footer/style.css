@@ -1,0 +1,26 @@
+
+
+.contenedor-footer{
+    text-align: center;
+    background: rgb(184,193,238);
+    background: radial-gradient(circle, rgba(184,193,238,1) 0%, rgba(242,232,234,1) 100%);
+    font-family: 'Rock 3D', cursive;
+}
+
+.contenedor-lista{
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    gap: 50px;
+    font-family: 'Rock 3D', cursive;
+    font-size: 30px;
+    list-style: none;
+    padding: 10px;
+    color:#0b2a2a;
+
+}
+
+.contenedor-lista li a{
+    color: inherit;
+    text-decoration: none;
+}

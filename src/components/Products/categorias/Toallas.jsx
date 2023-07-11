@@ -18,9 +18,10 @@ const Toallas = () => {
                     <h1>{c.id}</h1>
                     <img src={c.avatar} alt='' />
                     <div className='cont'>
-                        <p>{c.description}</p>
+                        <p>{c.name}</p>
+                        <p>Descripcion: {c.description}</p>
                         <p>{c.category}</p>
-                        <p className='price'>{c.price}</p>
+                        <p className='price'>${c.price}</p>
                     </div>
                     <Navegar id={c.id}/>
 

@@ -6,7 +6,6 @@ export const useFetch = (url, config) => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true);
 
-
     const handleFetch = useCallback(async () => {
 
         try {

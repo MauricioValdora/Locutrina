@@ -8,7 +8,7 @@ import Buscador from '../../components/search/Searcher'
 import { useNavigate } from 'react-router-dom';
 import './style.css'
 
-function Home() {
+function Todo() {
 
     const navigate = useNavigate();
 
@@ -52,13 +52,19 @@ function Home() {
                     <div div className='productsContainer'>
 
                         {loading && <Loading />}
-                        {products.map(p => (
-                            <ItemListContainer key={p.id} {...p} showDetails={showDetails} />
-                        ))}
+                        {products.map(p => {
+                            
+                            if(p.category=='Hat'||p.category=='Shoes'||p.category=='Shirt'||p.category=='Towels'||p.category=='Pants'){
+                                return( <ItemListContainer key={p.id} {...p} showDetails={showDetails} />)
+                            }
+                         
+                        }
+                            
+                        )}
 
                     </div >}
         </>
     )
 }
 
-export default Home
+export default Todo

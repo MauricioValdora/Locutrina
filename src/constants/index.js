@@ -1,10 +1,10 @@
 
 
-export const BASE_URL = 'https://64a33fa4b45881cc0ae6415a.mockapi.io';
+export const BASE_URL = 'https://6499986279fbe9bcf83f91f9.mockapi.io';
 
 export const API_URLS = {
     PRODUCTS: {
-        url: `${BASE_URL}/Products`,
+        url: `${BASE_URL}/products`,
         config: {
             method: 'GET',
             headers: {
