@@ -18,7 +18,7 @@ function Todo() {
     const { products, loading } = useFetch(API_URLS.PRODUCTS.url, API_URLS.PRODUCTS.config);
 
     const showDetails = (id) => {
-        navigate(`Products/${id}`)
+        navigate(`/Products/${id}`)
     }
 
     const filterBySearch = (query) => {
