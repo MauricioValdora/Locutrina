@@ -1,19 +1,21 @@
 
 
 .contenedor-footer{
+    display: flex;
+    justify-content: space-between;
     text-align: center;
     background: rgb(184,193,238);
     background: radial-gradient(circle, rgba(184,193,238,1) 0%, rgba(242,232,234,1) 100%);
-    font-family: 'Rock 3D', cursive;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
 .contenedor-lista{
     display: flex;
     justify-content: center;
-    height: 5rem;
-    gap: 50px;
+    height: 4rem;
+    gap: 30px;
     font-family: 'Rock 3D', cursive;
-    font-size: 30px;
     list-style: none;
     padding: 10px;
     color:#0b2a2a;

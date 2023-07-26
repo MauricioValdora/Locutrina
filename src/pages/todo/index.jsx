@@ -7,6 +7,8 @@ import Button from '../../components/input/Button'
 import Buscador from '../../components/search/Searcher'
 import { useNavigate } from 'react-router-dom';
 import './style.css'
+import { useContext } from 'react'
+import {CartContext} from '../../context/context'
 
 function Todo() {
 
@@ -14,6 +16,8 @@ function Todo() {
 
     const [search, setSearch] = useState('');
     const [productFiltered, setProductFiltered] = useState([]);
+
+    const { setProducts } = useContext(CartContext);
 
     const { products, loading } = useFetch(API_URLS.PRODUCTS.url, API_URLS.PRODUCTS.config);
 
@@ -31,13 +35,19 @@ function Todo() {
         setProductFiltered(updateProductList);
     }
 
+    useEffect(() => {
+        if(products?.length > 0) {
+            setProducts(products);
+        }
+    }, [products, setProducts])
+  
     const onChange = (event) => {
         const value = event.target.value;
         setSearch(value);
         filterBySearch(value);
     }
 
-    console.log(products)
+  
     return (
         <>
             <Buscador onChange={onChange} />

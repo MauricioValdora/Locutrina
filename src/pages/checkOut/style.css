@@ -1,0 +1,11 @@
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    padding: 10px;
+    gap: 10px;
+}
+.checkout{
+    background: rgb(184,193,238);
+    background: radial-gradient(circle, rgba(184,193,238,1) 0%, rgba(242,232,234,1) 100%);
+}

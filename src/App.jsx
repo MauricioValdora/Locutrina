@@ -11,11 +11,16 @@ import Zapatillas from './components/Products/categorias/Zapatillas'
 import Toallas from './components/Products/categorias/Toallas'
 import Footer from './components/footer/Footer'
 import Dashboard from './pages/dashBoard/Dashboard'
+import { CartProvider } from './context/context'
+import Carrito from './/components/carrito/Carrito'
+import CheckOut from './pages/checkOut/checkOut'
+
 
 
 function App() {
   return (
     <>
+    <CartProvider>
       <NavBar />
       <Routes>
         <Route path='/' element={<Dashboard />} />
@@ -26,8 +31,13 @@ function App() {
         <Route path='/products/pantalones' element={<Pantalones />} />
         <Route path='/products/zapatillas' element={<Zapatillas />} />
         <Route path='/products/toallas' element={<Toallas />} />
+        <Route path='/cart' element={<Carrito />} />
+        <Route path='/checkOut' element={<CheckOut />} />
+
+
       </Routes>
       <Footer />
+      </CartProvider>
     </>
   )
 

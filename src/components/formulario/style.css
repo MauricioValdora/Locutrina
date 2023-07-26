@@ -1,0 +1,24 @@
+.form{
+    background: rgb(184,193,238);
+    background: radial-gradient(circle, rgba(184,193,238,1) 0%, rgba(242,232,234,1) 100%);
+    height: 20rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+.form p{
+    font-size: 40px;
+}
+.inputs-form{
+    padding: 3rem;
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+.boton-form{
+    border-radius: 5px;
+    font-size: 20px;
+}
+

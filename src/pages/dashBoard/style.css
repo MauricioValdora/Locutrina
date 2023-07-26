@@ -1,0 +1,39 @@
+.contenedorDashboard{
+  background: rgb(184,193,238);
+  background: radial-gradient(circle, rgba(184,193,238,1) 0%, rgba(242,232,234,1) 100%);    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Rock 3D', cursive;
+    color:black;
+}
+
+.cont-imgs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cont-imgs img{
+    border-radius: 30px;
+    border: 1px solid black;
+    height: 15rem;
+    width: 20rem;
+}
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    animation: marquee 10s linear infinite;
+    
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  

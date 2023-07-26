@@ -6,13 +6,21 @@ const Footer =()=>{
 
     return(
         <div className='contenedor-footer'>
-            <h3>Contactanos</h3>
+            <div className='contacto'>
+            <h3>Contactos</h3>
+            <p>locutrina@gmail.com</p>
+            <p>Galeria de santa teresita</p>
+            </div>
+            <div className='redes-sociales'>
+            <h3>Redes sociales</h3>
+
             <ul className='contenedor-lista'>
                 <li><Link to='https://www.instagram.com/'>Instagram</Link></li>
                 <li><Link>Facebook</Link></li>
                 <li ><Link>Whatsapp</Link></li>
            
             </ul>   
+            </div>
         </div>
     )
 
