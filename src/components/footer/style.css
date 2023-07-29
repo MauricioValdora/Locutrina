@@ -1,6 +1,7 @@
 
 
 .contenedor-footer{
+    padding:0px 70px 0px 80px;
     display: flex;
     justify-content: space-between;
     text-align: center;

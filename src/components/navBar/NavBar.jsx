@@ -1,4 +1,3 @@
-import CardWidget from '../cardWidget/CardWidget'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
 import { Link,useNavigate } from 'react-router-dom';
@@ -10,6 +9,17 @@ import { API_URLS } from '../../constants/index'
 import logo from '../../assets/logo.jpeg'
 
 const NavBar = () => {
+
+  const { setProducts } = useContext(CartContext);
+
+  const { products } = useFetch(API_URLS.PRODUCTS.url, API_URLS.PRODUCTS.config);
+
+  useEffect(() => {
+      if(products?.length > 0) {
+          setProducts(products);
+      }
+  }, [products, setProducts]);
+
   
     const [clickedItems, setClickedItems] = useState([]);
     const navigate = useNavigate();
@@ -59,11 +69,11 @@ const NavBar = () => {
 
             <li onClick={goToCart}>
             <img className="menu-cart-image" src="https://cdn-icons-png.flaticon.com/512/665/665199.png" alt="cart" />
+            </li>
+                   </ul>
             <div className="menu-cart-count-container">
                             <span className="menu-cart-count">{cart.length}</span>
                         </div>
-            </li>
-                   </ul>
             </nav>
         </header>
     )

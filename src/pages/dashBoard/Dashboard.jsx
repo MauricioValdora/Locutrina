@@ -7,8 +7,10 @@ import publico from '../../assets/publico.jpeg';
 import vidriera from '../../assets/vidriera.jpeg'; 
 import Formulario from '../../components/formulario/Formulario';
 
+
 const Dashboard =()=>{
-    
+
+
     return(
         <div className='contenedorDashboard'>
         <h1>Bienvenidos a Locutrina</h1>

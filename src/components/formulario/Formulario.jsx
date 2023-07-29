@@ -6,25 +6,23 @@ const Formulario = () => {
   const [mostrarMensaje, setMostrarMensaje] = useState(false);
   const [mostrarMensajeIncompletos, setMostrarMensajeIncompletos] = useState(false);
   
-  // Agrega más estados para otros campos del formulario
 
-  // Función para manejar el envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
 if (nombre || email) {
     setMostrarMensaje(true);
     setTimeout(() => {
         setMostrarMensaje(false);
-      }, 5000); // 5000 milisegundos = 5 segundos
+      }, 5000); 
   } else {
     setMostrarMensajeIncompletos(true);
-    // Lógica para manejar el envío del formulario
     setTimeout(() => {
         setMostrarMensajeIncompletos(false);
-      }, 5000); // 5000 milisegundos = 5 segundos
+      }, 5000);
   }}
 
   return (
+    <>
     <form onSubmit={handleSubmit} className='form'>
         <h3>Dejanos tu mail para recibir novedades</h3>
         <div className='inputs-form'>
@@ -43,6 +41,8 @@ if (nombre || email) {
                 {mostrarMensajeIncompletos && <p>Primero Completar los campos</p>}
 
     </form>
+    
+    </>
   );
 };
 

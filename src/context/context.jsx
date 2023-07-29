@@ -13,12 +13,14 @@ const initialState = {
     onAddToCart: () => {},
     onRemoveItem: () => {},
     total: 0,
+    
 }
 
 export const CartContext = createContext(initialState);
 
 export const CartProvider = ({ children }) => {
 
+    const [showMessage, setShowMessage] = useState(false)
     const [cart, setCart] = useState([]);
     const [categories, setCategories] = useState([]);
     const [products, setProducts] = useState([]);
@@ -43,6 +45,15 @@ export const CartProvider = ({ children }) => {
                 })
             });
         }
+
+
+        setShowMessage(true)
+
+        setTimeout(() => {
+            setShowMessage(false);
+        }, 2000);
+       
+        
     }
 
     const onDecreaseItem = (id) => {
@@ -88,7 +99,8 @@ export const CartProvider = ({ children }) => {
                 setCategories,
                 setProducts,
                 getItemQuantity,
-                getTotalItemQuantity
+                getTotalItemQuantity,
+                showMessage
             }}
         >
             {children}

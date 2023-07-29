@@ -14,10 +14,12 @@
   justify-content: center;
 }
 .cont-imgs img{
+  margin: 10px;
     border-radius: 30px;
     border: 1px solid black;
     height: 15rem;
     width: 20rem;
+    object-fit: cover;
 }
 
 .marquee {
