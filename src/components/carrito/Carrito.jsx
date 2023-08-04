@@ -15,11 +15,12 @@ const Card =()=>{
     }
 
     return(
+        <div className='contDelCont'>
         <div className='cartContainer'>
             {cart.length === 0 && 
             <div>
             <h3 className='tittleCar'>El carrito esta vacio</h3>
-            <img src={preview} alt="asd" className='carritoImg'/>
+            <img src={preview} alt="imagenCart" className='carritoImg'/>
             </div>
             }
             {   
@@ -34,6 +35,7 @@ const Card =()=>{
                     </div>
                 )
             }
+        </div>
         </div>
     )
 

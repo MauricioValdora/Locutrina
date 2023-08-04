@@ -5,11 +5,10 @@ const Formulario = () => {
   const [email, setEmail] = useState('');
   const [mostrarMensaje, setMostrarMensaje] = useState(false);
   const [mostrarMensajeIncompletos, setMostrarMensajeIncompletos] = useState(false);
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-if (nombre || email) {
+if (nombre && email) {
     setMostrarMensaje(true);
     setTimeout(() => {
         setMostrarMensaje(false);
@@ -37,8 +36,8 @@ if (nombre || email) {
                 </label>
         </div>
                 <button type="submit" className='boton-form'>Enviar</button>
-                {mostrarMensaje && <p>¡Gracias, {nombre}!</p>}
-                {mostrarMensajeIncompletos && <p>Primero Completar los campos</p>}
+                {mostrarMensaje && <p>Gracias, {nombre}!</p>}
+                {mostrarMensajeIncompletos && <p>Primero Completar los campos!</p>}
 
     </form>
     

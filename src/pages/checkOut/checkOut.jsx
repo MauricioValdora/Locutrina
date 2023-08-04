@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './style.css';
 import { CarritoItem } from '../../components/carrito/CarritoItem';
 import { useContext } from 'react';
 import {CartContext} from '../../context/context'
 import { firebaseService } from '../../services/firebase';
+import {  Link} from 'react-router-dom';
+import carritocomprado from '../../assets/carritocomprado.jpg'
 
 
 const CheckOut = () => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-
-
+  const [completarCampo, setCompletarCampo]=useState(true);
 
 
 
@@ -41,41 +42,32 @@ const CheckOut = () => {
         createdAt:new Date()
 
     }));
+  
   };
+
+  useEffect(() => {
+    const { nombre, apellido, email, documento, telefono, codigoPostal, direccion, localidad } = formData;
+    const allFieldsCompleted =
+      nombre && apellido && email && documento.length>8   && telefono && codigoPostal && direccion && localidad;
+    setCompletarCampo(!allFieldsCompleted);
+  }, [formData]);
 
   const handleSubmit = async(e) => {
     e.preventDefault();
     setIsSubmitted(true);
 
-
-    // Now formData contains all the values from the form
-    console.log(formData);
- 
     const order = await firebaseService.createOrder(formData)
 
-    // You can use the formData to send it to the server or perform any other actions.
-
-    // Clear the form after submission
-    setFormData({
-      nombre: '',
-      apellido: '',
-      email: '',
-      documento: '',
-      telefono: '',
-      codigoPostal: '',
-      direccion: '',
-      localidad: '',
-    });
-
-    // return order
   };
 
   return (
     <>
 
       {isSubmitted ? (
-        <div>
-          <h1>Gracias por su compra!  :)</h1>
+        <div className='compraFinalizadaContainer'>
+          <h1>{`Gracias por su compra ${formData.nombre}   :)`}</h1>
+          <img className='imagenCompraFinalizada' src={carritocomprado} alt="" />
+          <p ><Link className='linkVolverInicio' to='/'>Volver al inicio</Link></p> 
         </div> 
       ):(
         <div>
@@ -90,7 +82,9 @@ const CheckOut = () => {
           <input type="number" placeholder='Codigo postal' name='codigoPostal' value={formData.codigoPostal} onChange={handleChange} />
           <input type="text" placeholder='Direccion' name='direccion' value={formData.direccion} onChange={handleChange} />
           <input type="text" placeholder='Localidad' name='localidad' value={formData.localidad} onChange={handleChange} />
-          <button type='submit'>Confirmar</button>
+
+          {completarCampo&&<h1>Porfavor completa todos los campos</h1>}
+          <button type='submit' disabled = {completarCampo} onClick={()=>cart.splice(0)} >Confirmar</button>
         </form>
         <CarritoItem />
       </div>

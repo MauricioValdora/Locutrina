@@ -12,3 +12,21 @@
     display: flex;
     overflow:auto;
 }
+.checkOutContainer{
+    background-color: #f1e9e9;
+
+}
+
+.linkVolverInicio{
+    color: inherit;
+    text-decoration: none;
+    font-size: 2rem;
+    
+}
+.imagenCompraFinalizada{
+    max-width: 50rem;
+}
+.compraFinalizadaContainer{
+    text-align: center;
+    
+}

@@ -25,7 +25,7 @@ const Gorras = () => {
 
     return (
         <div className='productsContainer'>
-
+            
             {loading && <Loading />}
             {categorias.map(c => (
               <ItemListContainer key={c.id} {...c}showDetails={showDetails}/>

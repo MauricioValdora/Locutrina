@@ -5,8 +5,8 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
-    background: rgb(184,193,238);
-    background: radial-gradient(circle, rgba(184,193,238,1) 0%, rgba(242,232,234,1) 100%);
+    background-color: #f1e9e9
+;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
 }

@@ -8,6 +8,7 @@ import vidriera from '../../assets/vidriera.jpeg';
 import Formulario from '../../components/formulario/Formulario';
 
 
+
 const Dashboard =()=>{
 
 
@@ -16,12 +17,12 @@ const Dashboard =()=>{
         <h1>Bienvenidos a Locutrina</h1>
         <p className='marquee'>Ventas al por mayor y por menor</p>
                 <div className='cont-imgs'>
-                    <img src={publico} alt="" />
-                    <img src={descarga} alt="" />
-                    <img src={logo} alt="" />
-                    <img src={maniki} alt="" />
-                    <img src={nena} alt="" />
-                    <img src={vidriera} alt="" />
+                    <img src={publico} alt="publico" />
+                    <img src={descarga} alt="descarga" />
+                    <img src={logo} alt="logo" />
+                    <img src={maniki} alt="maniki" />
+                    <img src={nena} alt="nena" />
+                    <img src={vidriera} alt="vidriera" />
                 </div>
 
                <Formulario/>

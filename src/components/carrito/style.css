@@ -2,15 +2,20 @@
 .cartContainer {
     margin: 1rem 1.6rem;
     gap: 1rem;
-    width: 50vw;
+    width: 35vw;
+    
    
+}
+.contDelCont{
+    padding: 1px;
+
 }
 .cartItem{
 padding: 20px;
 border: 1px solid black ;
 border-radius: 10px;
 margin: 10px;
-background-color: #f1e9e9
+background-color: #e0cfca;
 
 }
 
@@ -74,4 +79,8 @@ background-color: #f1e9e9
     height: auto;
     border-radius: 20px;
     border: 2px solid black;
+}
+
+.carritoImg{
+    max-width: 50rem;
 }

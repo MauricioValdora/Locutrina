@@ -1,6 +1,6 @@
 .form{
-    background: rgb(184,193,238);
-    background: radial-gradient(circle, rgba(184,193,238,1) 0%, rgba(242,232,234,1) 100%);
+    background-color: #f1e9e9
+;
     height: 20rem;
     width: 100%;
     display: flex;
@@ -15,7 +15,6 @@
     padding: 3rem;
     font-size: 20px;
     text-transform: uppercase;
-
 }
 .boton-form{
     border-radius: 5px;

@@ -7,7 +7,7 @@ import Buscador from '../../components/search/Searcher'
 import { useNavigate } from 'react-router-dom';
 import './style.css'
 import { useContext } from 'react'
-import {CartContext} from '../../context/context'
+import { CartContext } from '../../context/context'
 
 function Todo() {
 
@@ -16,7 +16,7 @@ function Todo() {
     const [search, setSearch] = useState('');
     const [productFiltered, setProductFiltered] = useState([]);
 
-    const {  products} = useContext(CartContext);
+    const { products } = useContext(CartContext);
 
     const { loading } = useFetch(API_URLS.PRODUCTS.url, API_URLS.PRODUCTS.config);
 
@@ -47,21 +47,25 @@ function Todo() {
 
             {
                 search.length > 0 ? (
-                    productFiltered.map((product) => (
+                    <div className='productsContainerBusqueda'>
+                    {productFiltered.map((product) => (
+
                         <ItemListContainer key={product.id} {...product} showDetails={showDetails} />
-                    ))
+                        ))
+                    }
+                    </div >
                 ) :
-                    <div div className='productsContainer'>
+                    <div className='productsContainer'>
 
                         {loading && <Loading />}
                         {products.map(p => {
-                            
-                            if(p.category=='Hat'||p.category=='Shoes'||p.category=='Shirt'||p.category=='Pants'){
-                                return( <ItemListContainer key={p.id} {...p} showDetails={showDetails} />)
+
+                            if (p.category == 'Hat' || p.category == 'Shoes' || p.category == 'Shirt' || p.category == 'Pants') {
+                                return (<ItemListContainer key={p.id} {...p} showDetails={showDetails} />)
                             }
-                         
+
                         }
-                            
+
                         )}
 
                     </div >}

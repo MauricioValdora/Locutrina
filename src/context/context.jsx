@@ -1,7 +1,4 @@
-/* eslint-disable react/prop-types */
 import { createContext, useState } from "react";
-import Card from "../components/carrito/Carrito";
-
 
 const initialState = {
     products: [],
