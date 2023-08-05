@@ -91,3 +91,14 @@ background-color: #e0cfca;
 .carritoImg{
     max-width: 50rem;
 }
+
+@media screen and (max-width: 500px) {
+
+    .cartItem{
+        width: 300px;
+    }
+    .carritoImg{
+        width: 300px;
+    }
+
+}

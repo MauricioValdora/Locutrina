@@ -37,7 +37,7 @@ if (nombre && email) {
         </div>
                 <button type="submit" className='boton-form'>Enviar</button>
                 {mostrarMensaje && <p>Gracias, {nombre}!</p>}
-                {mostrarMensajeIncompletos && <p>Primero Completar los campos!</p>}
+                {mostrarMensajeIncompletos && <p>Completar los campos!</p>}
 
     </form>
     

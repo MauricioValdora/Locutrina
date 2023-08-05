@@ -1,9 +1,6 @@
 .form{
-    /* background-color: #a2beee; */
-    background: rgb(184,193,238);
-    background: radial-gradient(circle, rgba(184,193,238,1) 0%, rgba(242,232,234,1) 100%);
+
     height: 20rem;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,6 +21,5 @@
     height: 30px;
     width: 5rem;
     font-family:'Times New Roman', Times, serif;
-    /* background-color: orange; */
 }
 
