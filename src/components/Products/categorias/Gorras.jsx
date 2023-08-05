@@ -24,15 +24,17 @@ const Gorras = () => {
     
 
     return (
+        <>
+            <h1 className='tittleProducts'>Gorras</h1>
         <div className='productsContainer'>
-            
+
             {loading && <Loading />}
             {categorias.map(c => (
               <ItemListContainer key={c.id} {...c}showDetails={showDetails}/>
             ))}
         </div>
 
-
+        </>
     );
 };
 

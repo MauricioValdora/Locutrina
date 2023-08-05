@@ -39,6 +39,8 @@ background-color: #e0cfca;
     padding: 1rem 2rem;
     font-size: 1rem;
     border-radius: 0.2rem;
+    cursor: pointer;
+
     transition: all 0.3s ease-in-out;
 }
 
@@ -50,6 +52,8 @@ background-color: #e0cfca;
     border: 1px solid black;
     padding: 0.5rem 1rem;
     font-size: 1rem;
+    cursor: pointer;
+
     border-radius: 0.2rem;
     transition: all 0.3s ease-in-out;
 }
@@ -60,6 +64,8 @@ background-color: #e0cfca;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     border-radius: 0.2rem;
+    cursor: pointer;
+
     transition: all 0.3s ease-in-out;
 }
 
@@ -72,6 +78,7 @@ background-color: #e0cfca;
     margin-left: 5px;
     border-radius: 0.2rem;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 .cardImage{
 

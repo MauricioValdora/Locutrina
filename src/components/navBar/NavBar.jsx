@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
 import { Link,useNavigate } from 'react-router-dom';
 import React, { useState,useEffect } from 'react';

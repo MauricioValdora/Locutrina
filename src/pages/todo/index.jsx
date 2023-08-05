@@ -44,7 +44,7 @@ function Todo() {
         <>
             <Buscador onChange={onChange} />
             {search.length > 0 && productFiltered.length === 0 && <h2>Producto no encontrado</h2>}
-
+            <h1 className='tittleProducts'>Todos los productos</h1>
             {
                 search.length > 0 ? (
                     <div className='productsContainerBusqueda'>

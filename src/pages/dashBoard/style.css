@@ -1,13 +1,15 @@
 .contenedorDashboard{
-  /* background: rgb(184,193,238);
-  background: radial-gradient(circle, rgba(184,193,238,1) 0%, rgba(242,232,234,1) 100%); */
-  background-color: #f1e9e9;
-
+  background: rgb(184,193,238);
+  background: radial-gradient(circle, rgba(184,193,238,1) 0%, rgba(242,232,234,1) 100%);
+  /* background-color: #f1e9e9; */
       display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: 'Rock 3D', cursive;
+}
+.tituloDashboar{
+  font-size: 3rem;
 }
 
 .cont-imgs{
@@ -30,6 +32,7 @@
     overflow: hidden;
     box-sizing: border-box;
     animation: marquee 10s linear infinite;
+    font-weight: bold;
     
   }
 

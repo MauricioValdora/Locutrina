@@ -3,7 +3,7 @@ import { API_URLS } from '../../../constants/index'
 import Loading from '../../loader/loading';
 import { Navegar } from '../../../hooks/useNavigate';
 import { useContext } from 'react'
-import {CartContext} from '../../../context/context'
+import { CartContext } from '../../../context/context'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import { useNavigate } from 'react-router-dom';
 
@@ -20,15 +20,20 @@ const Pantalones = () => {
         .filter(product => product.category === 'Pants')
 
     return (
-        <div className='productsContainer'>
+        <>
+            <h1 className='tittleProducts'>Pantalones</h1>
 
-            {loading && <Loading />}
 
-            {categorias.map(c => (
-              <ItemListContainer key={c.id} {...c}showDetails={showDetails}/>
-              ))}
-        </div>
+            <div className='productsContainer'>
 
+                {loading && <Loading />}
+
+                {categorias.map(c => (
+                    <ItemListContainer key={c.id} {...c} showDetails={showDetails} />
+                ))}
+            </div>
+
+        </>
 
     );
 };

@@ -3,7 +3,7 @@ import { API_URLS } from '../../../constants/index'
 import Loading from '../../loader/loading';
 import { Navegar } from '../../../hooks/useNavigate';
 import { useContext } from 'react'
-import {CartContext} from '../../../context/context'
+import { CartContext } from '../../../context/context'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import { useNavigate } from 'react-router-dom';
 
@@ -16,22 +16,25 @@ const Zapatillas = () => {
         navigate(`/Products/${id}`)
     }
 
-    const {  loading } = useFetch(`${API_URLS.PRODUCTS.url}`);
+    const { loading } = useFetch(`${API_URLS.PRODUCTS.url}`);
     const { products } = useContext(CartContext);
 
     const categorias = products
         .filter(product => product.category === 'Shoes')
 
     return (
-        <div className='productsContainer'>
+        <>
+            <h1 className='tittleProducts'>Zapatillas</h1>
 
-            {loading && <Loading />}
-       
-            {categorias.map(c => (
-              <ItemListContainer key={c.id} {...c}showDetails={showDetails}/>
-              ))}
-        </div>
+            <div className='productsContainer'>
 
+                {loading && <Loading />}
+
+                {categorias.map(c => (
+                    <ItemListContainer key={c.id} {...c} showDetails={showDetails} />
+                ))}
+            </div>
+        </>
     );
 };
 

@@ -14,7 +14,7 @@ const Dashboard =()=>{
 
     return(
         <div className='contenedorDashboard'>
-        <h1>Bienvenidos a Locutrina</h1>
+        <h1 className='tituloDashboar'>Bienvenidos a Locutrina</h1>
         <p className='marquee'>Ventas al por mayor y por menor</p>
                 <div className='cont-imgs'>
                     <img src={publico} alt="publico" />

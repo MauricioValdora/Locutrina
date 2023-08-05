@@ -22,6 +22,8 @@ const Remeras = () => {
         .filter(product => product.category === 'Shirt')
 
     return (
+<>
+<h1 className='tittleProducts'>Remeras</h1>
 
         <div className='productsContainer'>
             {loading && <Loading />}
@@ -31,7 +33,7 @@ const Remeras = () => {
               ))}
         </div>
 
-
+        </>
     );
 };
 

@@ -15,8 +15,13 @@
 }
 .img{
     max-width: 100%;
-    width: 25rem;
+    width: 15rem;
     height: 15rem;
     border: 3px solid black;
     display: block;
+}
+.btn{
+    height: 2rem;
+    width: 5rem;
+    font-size: 10px;
 }
